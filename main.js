@@ -21,6 +21,7 @@ function cat(){
 		// Set the value to 'true' if you'd like to pass cookies to the server.
 		// If this is enabled, your server must respond with the header
 		// 'Access-Control-Allow-Credentials: true'.
+		'Access-Control-Allow-Origin': false,
 		withCredentials: false
 	  },
 
