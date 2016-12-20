@@ -16,9 +16,10 @@ function cat(){
 		},200);
 	}*/
 	var data = $.getJSON("http://random.cat/meow")
-	if(data==null) console.log(1);
+	if(data===undefined) console.log(1);
+		else{
 		console.log(data.file);
-		change.innerHTML="<img src=\""+data.file+"\">";
+		change.innerHTML="<img src=\""+data.file+"\">";}
 	/*$.ajax({
 	  type: 'GET',
 	  url: 'http://random.cat/meow',
