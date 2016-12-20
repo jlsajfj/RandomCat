@@ -4,6 +4,7 @@ function cat(){
 	if (!xhr) {
 		throw new Error('CORS not supported');
 	}else{
+		console.log(xhr);
 		if(xhr.statusText.indexOf('nsresult: "0x805e0006 (<unknown>)"') > -1) console.log(1);
 		else xhr.send();
 	}
