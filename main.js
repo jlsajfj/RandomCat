@@ -16,6 +16,7 @@ function cat(){
 		},200);
 	}*/
 	var data = $.getJSON("http://random.cat/meow")
+	console.log(data);
 	if(data===undefined) console.log(1);
 		else{
 		console.log(data.file);
