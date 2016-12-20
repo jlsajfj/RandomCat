@@ -6,6 +6,7 @@ function cat(){
 		throw new Error('CORS not supported');
 	}else{
 		console.log(xhr);
+		console.log(xhr.statusText);
 		if(xhr.statusText==""){ console.log(1);
 			change.innerHTML="Please Enable Scripts<br /><img src=\"sheild.png\"><br /><img src=\"scripts.png\">";
 		}
