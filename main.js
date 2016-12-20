@@ -1,4 +1,3 @@
-$.get("//public.opencpu.org/ocpu/library/")
 function cat(){
 	var change = document.getElementById('cat');
 	/*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
