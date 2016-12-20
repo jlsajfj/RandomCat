@@ -1,17 +1,19 @@
 function cat(){
 	var change = document.getElementById('cat');
 	$("#cat").fadeOut(function(){
-	var xhr = createCORSRequest('GET', 'http://random.cat/meow').delay(300);
+	var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
 		throw new Error('CORS not supported');
 	}else{
 		console.log(xhr);
 		console.log(xhr.response);
+		window.setTimeout(function(){
 		if(xhr.statusText==""){ console.log(1);
 			change.innerHTML="Please Enable Scripts<br /><img src=\"sheild.png\"><br /><img src=\"scripts.png\">";
 		}
 		else change.innerHTML="<img src=\""+xhr.response[0].file+"\">";
 		xhr.send();
+		},200
 	}
 	$("#cat").fadeIn();
 	/*$.getJSON("http://random.cat/meow").then(function(data) {
