@@ -15,13 +15,15 @@ function cat(){
 		xhr.send();
 		},200);
 	}*/
-	var data = $.getJSON("http://random.cat/meow")
+				
+/*
+var data = $.getJSON("http://random.cat/meow")
 	console.log(data);
 	if(data.readyState==0) console.log(7);
 		else{
 		console.log(data.responseText);
-		change.innerHTML="<img src=\""+data.responseText.file+"\">";}
-	/*$.ajax({
+		change.innerHTML="<img src=\""+data.responseText.file+"\">";}*/
+/*$.ajax({
 	  type: 'GET',
 	  url: 'http://random.cat/meow',
 	  contentType: 'text/plain',
