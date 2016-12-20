@@ -6,11 +6,16 @@ function cat(){
 	}else{
 		xhr.send();
 	}*/
-	/*$.getJSON("http://random.cat/meow").then(function(data) {
-		console.log(data.file);
-		change.innerHTML="<img src=\""+data.file+"\">";
-	});*/
-	$.ajax({
+	try{
+		$.getJSON("http://random.cat/meow").then(function(data) {
+			console.log(data.file);
+			change.innerHTML="<img src=\""+data.file+"\">";
+		});
+	}
+	catch(err){
+		console.log(err);
+	}
+	/*$.ajax({
 	  type: 'GET',
 	  url: 'http://random.cat/meow',
 	  contentType: 'text/plain',
@@ -41,7 +46,7 @@ function cat(){
 		// this function will still fire, but there won't be any additional
 		// information about the error.
 	  }
-	});
+	});*/
 }
 
 function createCORSRequest(method, url) {
