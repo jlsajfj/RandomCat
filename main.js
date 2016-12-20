@@ -13,7 +13,7 @@ function cat(){
 		}
 		else change.innerHTML="<img src=\""+xhr.response[0].file+"\">";
 		xhr.send();
-		},200
+		},200);
 	}
 	$("#cat").fadeIn();
 	/*$.getJSON("http://random.cat/meow").then(function(data) {
