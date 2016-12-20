@@ -1,15 +1,16 @@
 function cat(){
 	var change = document.getElementById('cat');
-	/*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
+	var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
 		throw new Error('CORS not supported');
 	}else{
 		xhr.send();
-	}*/
-	$.getJSON("http://random.cat/meow").then(function(data) {
+	}
+	if(xhr.statusText.indexOf('nsresult: "0x805e0006 (<unknown>)"') > -1) console.log(1);
+	/*$.getJSON("http://random.cat/meow").then(function(data) {
 		console.log(data.file);
 		change.innerHTML="<img src=\""+data.file+"\">";
-	});
+	});*/
 	/*$.ajax({
 	  type: 'GET',
 	  url: 'http://random.cat/meow',
