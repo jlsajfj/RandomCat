@@ -1,8 +1,7 @@
 function cat(){
 	var change = document.getElementById('cat');
 	$("#cat").fadeOut(function(){
-		xhr.responseType="json";
-	var xhr = createCORSRequest('GET', 'http://random.cat/meow');
+	var xhr = createCORSRequest('GET', 'http://random.cat/meow').responseType="json";
 	if (!xhr) {
 		throw new Error('CORS not supported');
 	}else{
