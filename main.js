@@ -1,7 +1,8 @@
 function cat(){
 	var change = document.getElementById('cat');
 	$("#cat").fadeOut(function(){
-	/*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
+			$.getJSON("http://random.cat/meow").then (function (data){change.innerHTML="<img src=\""+data.file+"\">";});
+/*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
 		throw new Error('CORS not supported');
 	}else{
@@ -23,8 +24,8 @@ var data = $.getJSON("http://random.cat/meow")
 		else{
 		console.log(data.responseText);
 		change.innerHTML="<img src=\""+data.responseText.file+"\">";}*/
-/*$.ajax({
-	  type: 'GET',
+/*$.ajax({	
+  type: 'GET',
 	  url: 'http://random.cat/meow',
 	  contentType: 'text/plain',
 
