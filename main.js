@@ -1,11 +1,16 @@
 function cat(){
 	var change = document.getElementById('cat');
+	change.fadeOut(function(){
+		xhr.responseType="json";
 	var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
 		throw new Error('CORS not supported');
 	}else{
 		console.log(xhr);
-		if(xhr.statusText=="") console.log(1);
+		if(xhr.statusText==""){ console.log(1);
+			change.innerHTML="Please Enable Scripts<br /><img src=\"sheild.png\"><br /><img src=\"scripts.png\">";
+		}
+		else change.innerHTML="<img src=\""+xhr.response[0].file+"\">";
 		xhr.send();
 	}
 	/*$.getJSON("http://random.cat/meow").then(function(data) {
@@ -44,6 +49,7 @@ function cat(){
 		// information about the error.
 	  }
 	});*/
+	});
 }
 
 function createCORSRequest(method, url) {
