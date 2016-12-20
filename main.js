@@ -6,16 +6,10 @@ function cat(){
 	}else{
 		xhr.send();
 	}*/
-	try{
-		$.getJSON("http://random.cat/meow").then(function(data) {
-			console.log(data.file);
-			change.innerHTML="<img src=\""+data.file+"\">";
-		});
-	}
-	catch(err){
-		console.log(err);
-		console.log(1);
-	}
+	$.getJSON("http://random.cat/meow").then(function(data) {
+		console.log(data.file);
+		change.innerHTML="<img src=\""+data.file+"\">";
+	});
 	/*$.ajax({
 	  type: 'GET',
 	  url: 'http://random.cat/meow',
