@@ -1,7 +1,7 @@
 function cat(){
 	var change = document.getElementById('cat');
 	$("#cat").fadeOut(function(){
-	var xhr = createCORSRequest('GET', 'http://random.cat/meow');
+	/*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
 		throw new Error('CORS not supported');
 	}else{
@@ -14,12 +14,11 @@ function cat(){
 		else change.innerHTML="<img src=\""+xhr.response[0].file+"\">";
 		xhr.send();
 		},200);
-	}
-	$("#cat").fadeIn();
-	/*$.getJSON("http://random.cat/meow").then(function(data) {
+	}*/
+	var data = $.getJSON("http://random.cat/meow")
+	if(data==null) console.log(1);
 		console.log(data.file);
 		change.innerHTML="<img src=\""+data.file+"\">";
-	});*/
 	/*$.ajax({
 	  type: 'GET',
 	  url: 'http://random.cat/meow',
@@ -53,6 +52,7 @@ function cat(){
 	  }
 	});*/
 	});
+	$("#cat").fadeIn();
 }
 
 function createCORSRequest(method, url) {
