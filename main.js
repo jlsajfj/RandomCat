@@ -6,6 +6,7 @@ function cat(){
 	}else{
 		console.log(xhr);
 		if(xhr.statusText=="") console.log(1);
+		xhr.send();
 	}
 	/*$.getJSON("http://random.cat/meow").then(function(data) {
 		console.log(data.file);
