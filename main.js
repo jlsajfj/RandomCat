@@ -5,8 +5,7 @@ function cat(){
 		throw new Error('CORS not supported');
 	}else{
 		console.log(xhr);
-		if(xhr.statusText.indexOf('nsresult: "0x805e0006 (<unknown>)"') > -1) console.log(1);
-		else xhr.send();
+		if(xhr.statusText=="") console.log(1);
 	}
 	/*$.getJSON("http://random.cat/meow").then(function(data) {
 		console.log(data.file);
