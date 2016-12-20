@@ -1,6 +1,6 @@
 function cat(){
 	var change = document.getElementById('cat');
-	change.fadeOut(function(){
+	$("#cat").fadeOut(function(){
 		xhr.responseType="json";
 	var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
@@ -13,6 +13,7 @@ function cat(){
 		else change.innerHTML="<img src=\""+xhr.response[0].file+"\">";
 		xhr.send();
 	}
+	$("#cat").fadeIn();
 	/*$.getJSON("http://random.cat/meow").then(function(data) {
 		console.log(data.file);
 		change.innerHTML="<img src=\""+data.file+"\">";
