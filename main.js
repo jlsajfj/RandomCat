@@ -1,7 +1,23 @@
+var thisvar;
+var change = document.getElementById('cat');
 function cat(){
-	var change = document.getElementById('cat');
-	$("#cat").fadeOut(function(){
-			$.getJSON("http://random.cat/meow").then (function (data){change.innerHTML="<img src=\""+data.file+"\">";});
+			$.getJSON("http://random.cat/meow").then (function (data){
+				//change.innerHTML="<img src=\""+data.file+"\">";
+				var img = new Image();
+				img.onload=function(){
+					console.log(this.width+" "+this.height);
+					console.log(this.height/500);
+					thisvar=500/this.height;
+					this.width=thisvar*this.width;
+					this.height=500;
+					console.log(this.width+" "+this.height);
+					console.log(this);
+					var temp = "<img src=\""+this.src+"\" height=\""+this.height+"\" width=\""+this.width+"\">";
+					console.log(temp);
+					change.innerHTML="<img src=\""+this.src+"\" height=\""+this.height+"\" width=\""+this.width+"\">";
+				}
+				img.src=data.file;
+			});
 /*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
 		throw new Error('CORS not supported');
@@ -56,8 +72,6 @@ var data = $.getJSON("http://random.cat/meow")
 		// information about the error.
 	  }
 	});*/
-	});
-	$("#cat").fadeIn();
 }
 
 function createCORSRequest(method, url) {
