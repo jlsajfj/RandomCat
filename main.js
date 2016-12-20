@@ -14,6 +14,7 @@ function cat(){
 	}
 	catch(err){
 		console.log(err);
+		console.log(1);
 	}
 	/*$.ajax({
 	  type: 'GET',
