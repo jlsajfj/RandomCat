@@ -1,16 +1,15 @@
-var thisvar;
+var thisvar,h=$(document).height()*15/16;
 var change = document.getElementById('cat');
 function cat(){
 			$.getJSON("http://random.cat/meow").then (function (data){
 				//change.innerHTML="<img src=\""+data.file+"\">";
 				var img = new Image();
 				img.onload=function(){
-					thisvar=500/this.height;
+					thisvar=h/this.height;
 					this.width=thisvar*this.width;
-					this.height=500;
-					console.log(this.width+" "+this.height);
+					this.height=h;
 					var temp = "<img src=\""+this.src+"\" height=\""+this.height+"\" width=\""+this.width+"\">";
-					console.log(temp);
+					//console.log(temp);
 					change.innerHTML="<img src=\""+this.src+"\" height=\""+this.height+"\" width=\""+this.width+"\">";
 				}
 				img.src=data.file;
