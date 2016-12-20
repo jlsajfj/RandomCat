@@ -5,13 +5,10 @@ function cat(){
 				//change.innerHTML="<img src=\""+data.file+"\">";
 				var img = new Image();
 				img.onload=function(){
-					console.log(this.width+" "+this.height);
-					console.log(this.height/500);
 					thisvar=500/this.height;
 					this.width=thisvar*this.width;
 					this.height=500;
 					console.log(this.width+" "+this.height);
-					console.log(this);
 					var temp = "<img src=\""+this.src+"\" height=\""+this.height+"\" width=\""+this.width+"\">";
 					console.log(temp);
 					change.innerHTML="<img src=\""+this.src+"\" height=\""+this.height+"\" width=\""+this.width+"\">";
