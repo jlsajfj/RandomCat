@@ -1,6 +1,7 @@
 var thisvar,h=$(document).height()*15/16;
 var change = document.getElementById('cat');
 function cat(){
+	h=$(document).height()*15/16
 			$.getJSON("http://random.cat/meow").then (function (data){
 				//change.innerHTML="<img src=\""+data.file+"\">";
 				var img = new Image();
