@@ -11,6 +11,7 @@ function loadyThingy(url){
 }
 
 window.onresize = function(event) {
+	console.log($(document.height())+" "+$(document.width()));
 	d=parseInt(Math.log2($(document).height())+0.5);
 	e=(2*d-1)/(2*d);
 	f=parseInt(Math.log2($(document).width())+0.5);
