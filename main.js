@@ -34,7 +34,7 @@ function cat(){
 						c=a*b
 						b=w;
 					}
-					var temp = "<img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\">";
+					var temp = "<a href=\"#\" onclick=\"cat()\"><img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\"></a><br />Click the Cat";
 					//console.log(temp);
 					change.innerHTML=temp;
 				}
