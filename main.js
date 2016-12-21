@@ -21,7 +21,7 @@ function fload(url){
 	img.src=url;
 }
 
-
+//should i make it just space and right?
 $(document).keypress(function() {
 	cat();
 })
