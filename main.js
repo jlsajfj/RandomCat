@@ -21,6 +21,11 @@ function fload(url){
 	img.src=url;
 }
 
+
+$(document).keypress(function() {
+	cat();
+})
+
 function cat(){
 			$.getJSON("http://random.cat/meow").then (function (data){
 				//change.innerHTML="<img src=\""+data.file+"\">";
