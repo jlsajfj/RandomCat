@@ -1,5 +1,26 @@
 var a,b,c,h=$(document).height()*15/16,w=$(document).width()*15/16;
 var change = document.getElementById('cat');
+
+//testing
+function fload(url){
+	console.log("You found my debug tools!");
+	var img = new Image();
+	img.onload=function(){
+		a=h/this.height;
+		b = a*this.width;
+		c = h;
+		if(b>w){
+			a=w/b;
+			c=a*b
+			b=w;
+		}
+		var temp = "<img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\">";
+		//console.log(temp);
+		change.innerHTML=temp;
+	}
+	img.src=url;
+}
+
 function cat(){
 			$.getJSON("http://random.cat/meow").then (function (data){
 				//change.innerHTML="<img src=\""+data.file+"\">";
@@ -8,6 +29,11 @@ function cat(){
 					a=h/this.height;
 					b = a*this.width;
 					c = h;
+					if(b>w){
+						a=w/b;
+						c=a*b
+						b=w;
+					}
 					var temp = "<img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\">";
 					//console.log(temp);
 					change.innerHTML=temp;
