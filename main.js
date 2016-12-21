@@ -30,7 +30,7 @@ function displayImage(url){
 			//ratio
 			a=w/b;
 			//height
-			c=a*c
+			c=a*c;
 			//width
 			b=w;
 		}
