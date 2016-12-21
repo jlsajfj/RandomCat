@@ -33,7 +33,7 @@ function displayImage(url){
 
 function cat(){
 	$("#cat").fadeOut(function(){
-		$.getJSON("http://random.cat/meow").then (displayImage(date.file));
+		$.getJSON("http://random.cat/meow").then (displayImage(data.file));
 	});
 /*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
