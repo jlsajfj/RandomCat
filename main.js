@@ -15,6 +15,7 @@ $(document).keypress(function() {
 	cat();
 })
 
+//overall
 function displayImage(url){
 	//change.innerHTML="<img src=\""+data.file+"\">";
 	var img = new Image();
