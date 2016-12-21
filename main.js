@@ -11,7 +11,7 @@ function fload(url){
 		c = h;
 		if(b>w){
 			a=w/b;
-			c=a*b
+			c=a*c;
 			b=w;
 		}
 		var temp = "<img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\">";
