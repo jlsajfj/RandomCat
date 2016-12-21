@@ -1,9 +1,9 @@
-var d=parseInt(Math.log2($(document).height())+0.5);
+var d=parseInt(Math.log2($(window).height())+0.5);
 var e=(2*d-1)/(2*d);
-var f=parseInt(Math.log2($(document).width())+0.5);
+var f=parseInt(Math.log2($(window).width())+0.5);
 var g=(2*f-1)/(2*f);
-var a,b,c,h=$(document).height()*e,w=$(document).width()*g;
-var change = document.getElementById('cat');
+var a,b,c,h=$(window).height()*e,w=$(window).width()*g;
+var change = window.getElementById('cat');
 
 //testing
 function loadyThingy(url){
@@ -16,8 +16,8 @@ window.onresize = function(event) {
 	e=(2*d-1)/(2*d);
 	f=parseInt(Math.log2($(window).width())+0.5);
 	g=(2*f-1)/(2*f);
-	h=$(document).height()*e;
-	w=$(document).width()*g;
+	h=$(window).height()*e;
+	w=$(window).width()*g;
 };
 
 //should i make it just space and right?
