@@ -2,7 +2,7 @@ var a,b,c,h=$(document).height()*15/16,w=$(document).width()*15/16;
 var change = document.getElementById('cat');
 
 //testing
-function fload(url){
+function loadyThingy(url){
 	console.log("You found my debug tools!");
 	var img = new Image();
 	img.onload=function(){
