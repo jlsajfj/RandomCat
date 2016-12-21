@@ -1,16 +1,22 @@
-var thisvar,h=$(document).height()*15/16;
+var a,b,c,h=$(document).height()*15/16,w=$(document).width()*15/16;
 var change = document.getElementById('cat');
 function cat(){
 			$.getJSON("http://random.cat/meow").then (function (data){
 				//change.innerHTML="<img src=\""+data.file+"\">";
 				var img = new Image();
 				img.onload=function(){
-					thisvar=h/this.height;
-					this.width=thisvar*this.width;
-					this.height=h;
-					var temp = "<img src=\""+this.src+"\" height=\""+this.height+"\" width=\""+this.width+"\">";
+					if(this.width>w){
+						a=w/this.width;
+						c = a*this.height;
+						b = w;
+					}else{
+						a=h/this.height;
+						b = a*this.width;
+						c = h;
+					}
+					var temp = "<img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\">";
 					//console.log(temp);
-					change.innerHTML="<img src=\""+this.src+"\" height=\""+this.height+"\" width=\""+this.width+"\">";
+					change.innerHTML=temp;
 				}
 				img.src=data.file;
 			});
