@@ -10,6 +10,15 @@ function loadyThingy(url){
 	displayImage(url);
 }
 
+window.onresize = function(event) {
+	d=parseInt(Math.log2($(document).height())+0.5);
+	e=(2*d-1)/(2*d);
+	f=parseInt(Math.log2($(document).width())+0.5);
+	g=(2*f-1)/(2*f);
+	h=$(document).height()*e;
+	w=$(document).width()*g;
+};
+
 //should i make it just space and right?
 $(document).keypress(function() {
 	cat();
