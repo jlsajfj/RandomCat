@@ -3,22 +3,7 @@ var change = document.getElementById('cat');
 
 //testing
 function loadyThingy(url){
-	console.log("You found my debug tools!");
-	var img = new Image();
-	img.onload=function(){
-		a=h/this.height;
-		b = a*this.width;
-		c = h;
-		if(b>w){
-			a=w/b;
-			c=a*c;
-			b=w;
-		}
-		var temp = "<img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\">";
-		//console.log(temp);
-		change.innerHTML=temp;
-	}
-	img.src=url;
+	displayImage(url);
 }
 
 //should i make it just space and right?
@@ -26,27 +11,30 @@ $(document).keypress(function() {
 	cat();
 })
 
+function displayImage(url){
+	//change.innerHTML="<img src=\""+data.file+"\">";
+	var img = new Image();
+	img.onload=function(){
+		a=h/this.height;
+		b = a*this.width;
+		c = h;
+		if(b>w){
+			a=w/b;
+			c=a*b
+			b=w;
+		}
+		var temp = "<a href=\"\" onclick=\"cat()\"><img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\"></a>";
+		//console.log(temp);
+		change.innerHTML=temp;
+		$("#cat").fadeIn();
+	}
+	img.src=url;
+}
+
 function cat(){
 	$("#cat").fadeOut(function(){
-			$.getJSON("http://random.cat/meow").then (function (data){
-				//change.innerHTML="<img src=\""+data.file+"\">";
-				var img = new Image();
-				img.onload=function(){
-					a=h/this.height;
-					b = a*this.width;
-					c = h;
-					if(b>w){
-						a=w/b;
-						c=a*b
-						b=w;
-					}
-					var temp = "<a href=\"#\" onclick=\"cat()\"><img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\"></a><br />Click the Cat";
-					//console.log(temp);
-					change.innerHTML=temp;
-					$("#cat").fadeIn();
-				}
-				img.src=data.file;
-			});});
+		$.getJSON("http://random.cat/meow").then (displayImage(date.file));
+	});
 /*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
 		throw new Error('CORS not supported');
