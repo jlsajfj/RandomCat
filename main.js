@@ -1,4 +1,8 @@
-var a,b,c,h=$(document).height()*15/16,w=$(document).width()*15/16;
+var d=parseInt(Math.log2($(document).height())+0.5);
+var e=(2*d-1)/(2*d);
+var f=parseInt(Math.log2($(document).width())+0.5);
+var g=(2*f-1)/(2*f);
+var a,b,c,h=$(document).height()*e,w=$(document).width()*g;
 var change = document.getElementById('cat');
 
 //testing
