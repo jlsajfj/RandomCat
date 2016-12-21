@@ -1,4 +1,4 @@
-var a,b,c,h=$(document).height()*15/16,w=$(document).width()*15/16;
+var a,b,c,h=$(document).height()*7/8,w=$(document).width()*15/16;
 var change = document.getElementById('cat');
 function cat(){
 			$.getJSON("http://random.cat/meow").then (function (data){
