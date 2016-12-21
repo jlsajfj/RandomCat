@@ -5,15 +5,9 @@ function cat(){
 				//change.innerHTML="<img src=\""+data.file+"\">";
 				var img = new Image();
 				img.onload=function(){
-					if(this.width>w){
-						a=w/this.width;
-						c = a*this.height;
-						b = w;
-					}else{
-						a=h/this.height;
-						b = a*this.width;
-						c = h;
-					}
+					a=h/this.height;
+					b = a*this.width;
+					c = h;
 					var temp = "<img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\">";
 					//console.log(temp);
 					change.innerHTML=temp;
