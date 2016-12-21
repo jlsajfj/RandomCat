@@ -27,6 +27,7 @@ $(document).keypress(function() {
 })
 
 function cat(){
+	$("#cat").fadeOut(function(){
 			$.getJSON("http://random.cat/meow").then (function (data){
 				//change.innerHTML="<img src=\""+data.file+"\">";
 				var img = new Image();
@@ -38,13 +39,14 @@ function cat(){
 						a=w/b;
 						c=a*b
 						b=w;
+						$("#cat").fadeIn();
 					}
 					var temp = "<a href=\"#\" onclick=\"cat()\"><img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\"></a><br />Click the Cat";
 					//console.log(temp);
 					change.innerHTML=temp;
 				}
 				img.src=data.file;
-			});
+			});});
 /*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
 		throw new Error('CORS not supported');
