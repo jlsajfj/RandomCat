@@ -20,15 +20,21 @@ function displayImage(url){
 	//change.innerHTML="<img src=\""+data.file+"\">";
 	var img = new Image();
 	img.onload=function(){
+		//get proper ration
 		a=h/this.height;
-		b = a*this.width;
+		//set proper width
+		b=a*this.width;
+		//set proper height
 		c = h;
 		if(b>w){
+			//ratio
 			a=w/b;
-			c=a*b
+			//height
+			c=a*c
+			//width
 			b=w;
 		}
-		var temp = "<br /><a href=\"\" onclick=\"cat()\"><img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\"></a>";
+		var temp = "<a href=\"\" onclick=\"cat()\"><img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\"></a>";
 		//console.log(temp);
 		change.innerHTML=temp;
 		$("#cat").fadeIn();
