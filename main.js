@@ -39,11 +39,11 @@ function cat(){
 						a=w/b;
 						c=a*b
 						b=w;
-						$("#cat").fadeIn();
 					}
 					var temp = "<a href=\"#\" onclick=\"cat()\"><img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\"></a><br />Click the Cat";
 					//console.log(temp);
 					change.innerHTML=temp;
+					$("#cat").fadeIn();
 				}
 				img.src=data.file;
 			});});
