@@ -54,7 +54,7 @@ function displayImage(url){
 
 function cat(){
 	$("#cat").fadeOut(function(){
-		$.get('python-handler.php').then (function(data){displayImage(data.file)});
+		$.get('https://jlsajfj.github.io/RandomCat/python-handler.php').then (function(data){displayImage(data.file)});
 	});
 /*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
