@@ -54,11 +54,8 @@ function displayImage(url){
 
 function cat(){
 	$("#cat").fadeOut(function(){
-		$.get("/custom/CATAPI/getCat/my_endpoint")
-                 .done(function(data){
-					 console.log(data);displayImage(data.file)
-                   });
-		//$.get('https://jlsajfj.github.io/RandomCat/python-handler.php').then (function(data){console.log(data);displayImage(data.file)});
+		//$.get("/custom/CATAPI/getCat/my_endpoint").done(function(data){console.log(data);displayImage(data.file)});
+		$.getJSON('http://random.cat/meow').then (function(data){console.log(data);displayImage(data.file)});
 	});
 /*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
