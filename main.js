@@ -54,7 +54,7 @@ function displayImage(url){
 
 function cat(){
 	$("#cat").fadeOut(function(){
-		$.getJSON("http://random.cat/meow").then (function(data){displayImage(data.file)});
+		$.get('python-handler.php').then (function(data){displayImage(data.file)});
 	});
 /*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
