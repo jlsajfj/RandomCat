@@ -55,7 +55,7 @@ function displayImage(url){
 function cat(){
 	$("#cat").fadeOut(function(){
 		//$.get("/custom/CATAPI/getCat/my_endpoint").done(function(data){console.log(data);displayImage(data.file)});
-		$.getJSON('https://server7.kproxy.com/servlet/redirect.srv/sygj/svyoznf/p1/meow').then (function(data){console.log(data);displayImage("https://server3.kproxy.com/servlet/redirect.srv/sygj/svyoznf/p1/i/"+data.file.substring(20))});
+		$.getJSON('https://crossorigin.me/http://random.cat/meow').then (function(data){console.log(data);displayImage("https://crossorigin.me/"+data.file)});
 	});
 /*var xhr = createCORSRequest('GET', 'http://random.cat/meow');
 	if (!xhr) {
