@@ -47,7 +47,7 @@ function displayImage(url){
 			//width
 			b=w;
 		}
-		var temp = "<a href=\"#\" onclick=\"cat()\"><img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\"></a>";
+		var temp = "<a href=\""+this.src+"\" onclick=\"cat()\"><img src=\""+this.src+"\" height=\""+c+"\" width=\""+b+"\"></a>";
 		//console.log(temp);
 		change.innerHTML=temp;
 		$("#cat").fadeIn();
