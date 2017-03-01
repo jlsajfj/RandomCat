@@ -4,6 +4,7 @@ var f=parseInt(Math.log2($(window).width())+0.5);
 var g=(2*f-1)/(2*f);
 var a,b,c,h=$(window).height()*e,w=$(window).width()*g;
 var change = document.getElementById('cat');
+var curImg;
 
 //testing
 function loadyThingy(url){
@@ -18,6 +19,7 @@ window.onresize = function(event) {
 	g=(2*f-1)/(2*f);
 	h=$(window).height()*e;
 	w=$(window).width()*g;
+	if(curImg!=null) displayImage(curImg);
 };
 
 //should i make it just space and right?
@@ -27,6 +29,7 @@ $(document).keypress(function() {
 
 //overall
 function displayImage(url){
+	curImg=url;
 	//change.innerHTML="<img src=\""+data.file+"\">";
 	var img = new Image();
 	img.onload=function(){
